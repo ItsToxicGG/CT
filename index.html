@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="spinthewheel.js" defer></script>
+    <title>Spin the Wheel</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Virtual Casino</h1>
+        <button id="depositBtn">Deposit</button>
+        <div id="balance">Virtual Balance: 238.38 ZAR</div>
+    </div>
+
+    <div id="game-container">
+        <label for="amount">Enter amount:</label>
+        <input type="number" id="amount" min="1" required>
+        <button id="spinBtn">Spin</button>
+
+        <div id="wheel" class="wheel">
+            <div class="wheel-section" id="section1">6</div>
+            <div class="wheel-section" id="section2">6</div>
+            <div class="wheel-section" id="section3">4</div>
+        </div>
+
+        <div id="result"></div>
+        <div id="counter"></div>
+
+        <!-- Deposit Form -->
+        <div id="depositForm" class="hidden">
+            <h2>Deposit Form</h2>
+            <form id="creditCardForm">
+                <label for="creditName">Credit Name:</label>
+                <input type="text" id="creditName" required>
+
+                <label for="creditNumber">Credit Number:</label>
+                <input type="text" id="creditNumber" pattern="[0-9]{16}" required>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
+
+                <label for="creditType">Credit Type:</label>
+                <select id="creditType" required>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                    <option value="amex">American Express</option>
+                </select>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" pattern="[0-9]{3,4}" required>
+
+                <label for="depositAmount">Amount:</label>
+                <input type="number" id="depositAmount" min="1" required>
+
+                <button type="button" id="confirmDepositBtn">Confirm Deposit</button>
+                <button type="button" id="cancelDepositBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="something.js" defer></script>
+</body>
+</html>
